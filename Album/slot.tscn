@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgfkilaealjgk"]
+
+[ext_resource type="Script" uid="uid://ceh43yk46ggwb" path="res://Album/slot.gd" id="1_lxefw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yxf3l"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.94510335, 0.3862584, 0.834363, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Slot" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lxefw")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 46.0
+offset_bottom = 56.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yxf3l")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 48.0
+offset_right = 48.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 8
+text = "x 0"

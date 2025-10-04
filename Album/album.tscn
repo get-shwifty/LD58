@@ -1,22 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://bu2q236hjt5t4"]
+[gd_scene load_steps=3 format=3 uid="uid://bu2q236hjt5t4"]
 
 [ext_resource type="Script" uid="uid://x5yw3dustn78" path="res://Album/album.gd" id="1_5p2gi"]
+[ext_resource type="PackedScene" uid="uid://cgfkilaealjgk" path="res://Album/slot.tscn" id="2_qwklg"]
 
 [node name="Album" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_5p2gi")
 
-[node name="Slot" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 32.0
-offset_top = 32.0
-offset_right = 190.0
-offset_bottom = 186.0
+[node name="Slot" parent="." instance=ExtResource("2_qwklg")]
+layout_mode = 1
 
-[node name="Slot2" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 274.0
-offset_top = 34.0
-offset_right = 432.0
-offset_bottom = 188.0
+[node name="Slot2" parent="." instance=ExtResource("2_qwklg")]
+layout_mode = 1
+offset_left = 65.0
+offset_right = 65.0

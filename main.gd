@@ -21,7 +21,8 @@ func _on_stamp_collected(stamp: Stamp):
 	var target_position = album.get_slot_position(stamp_id)
 	animate_stamp_to_slot(stamp, target_position)
 	album.mark_stamp_collected(stamp_id)
-	print(album.COLLECTED_STAMPS)
+	album.set_slot_occurency(stamp_id)
+	
 
 func animate_stamp_to_slot(stamp: Stamp, target_position: Vector2):
 	var tween = create_tween()
@@ -33,3 +34,6 @@ func animate_stamp_to_slot(stamp: Stamp, target_position: Vector2):
 	# Petit effet de scale pendant le déplacement
 	tween.tween_property(stamp, "scale", Vector2(1.2, 1.2), 0.25)
 	tween.chain().tween_property(stamp, "scale", Vector2(1.0, 1.0), 0.25)
+	
+	# Mise à jour du nb d'occurence
+	

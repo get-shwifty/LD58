@@ -17,5 +17,11 @@ func mark_stamp_collected(stamp_id: int):
 	# Si le carnet ne contient pas encore le timbre, on le rajoute avec son occurence
 	if COLLECTED_STAMPS.has(stamp_id) == false:
 		COLLECTED_STAMPS[stamp_id] = 1
+	# Sinon, on augmente son occurence
 	else:
 		COLLECTED_STAMPS[stamp_id] += 1
+
+func set_slot_occurency(stamp_id: int):
+	var slot: Slot = ALBUM_DICT[stamp_id]
+	var occurency = COLLECTED_STAMPS[stamp_id]
+	slot.get_node("Label").text = str(occurency)
