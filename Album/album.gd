@@ -2,7 +2,7 @@ extends Control
 class_name Album
 
 const SLOT_PER_PAGE = 6
-const SLOT_MARGE_SIZE_X = 288
+const SLOT_MARGE_SIZE_X = 250
 const SLOT_MARGE_SIZE_Y = 80
 var album_dict = global.ALBUM_DICT
 var COLLECTED_STAMPS: Dictionary = {}

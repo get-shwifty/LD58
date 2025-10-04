@@ -26,7 +26,19 @@ var ALBUM_DICT = {
 		"Description": "Leyndell - Elden Ring"
 	},
 	6: {
-		"Sprite": preload("res://Assets/stamps/leyndell.png"),
-		"Description": "Leyndell - Elden Ring"
+		"Sprite": preload("res://Assets/stamps/columbia.png"),
+		"Description": "Columbia"
+	},
+	7: {
+		"Sprite": preload("res://Assets/stamps/melinoe.png"),
+		"Description": "Melinoe - Hades II"
+	},
+	8: {
+		"Sprite": preload("res://Assets/stamps/DALARAN.png"),
+		"Description": "Dalaran"
+	},
+	9: {
+		"Sprite": preload("res://Assets/stamps/timberhearth.png"),
+		"Description": "Timber earth - Outer wilds"
 	}
 }

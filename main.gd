@@ -24,6 +24,7 @@ func _on_stamp_collected(stamp: Stamp):
 	print("Timbre collecté : ", stamp_id)
 	
 	var target_position = album.get_slot_position(stamp_id)
+	target_position.x -= 2
 	var target_slot = album.get_slot(stamp_id)
 	var target_page = album.get_page(stamp_id)
 	
@@ -38,11 +39,12 @@ func _on_stamp_collected(stamp: Stamp):
 	target_slot.add_child(stamp)
 	
 	# Restaurer la position globale APRÈS le reparentage
-	stamp.global_position = final_global_pos
+	stamp.global_position.x = final_global_pos.x
+	stamp.global_position.y = final_global_pos.y
 	
 	# Maintenant animer vers la position locale (0,0) dans le slot
 	var tween = create_tween()
-	tween.tween_property(stamp, "position", Vector2.ZERO, 0.2)
+	tween.tween_property(stamp, "position", Vector2(-2,0.0), 0.2)
 	
 	album.mark_stamp_collected(stamp_id)
 	album.set_slot_occurency(stamp_id)
