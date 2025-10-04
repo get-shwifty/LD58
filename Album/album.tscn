@@ -30,3 +30,8 @@ offset_right = 201.0
 layout_mode = 1
 offset_left = 263.0
 offset_right = 263.0
+
+[node name="Slot6" parent="." instance=ExtResource("2_qwklg")]
+layout_mode = 1
+offset_left = 325.0
+offset_right = 325.0

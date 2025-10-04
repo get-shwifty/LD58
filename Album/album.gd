@@ -14,7 +14,8 @@ class_name StampAlbum
 	2: {"Object": $Slot2, "Description": "Nevaries - Blue Prince" },
 	3: {"Object": $Slot3, "Description": "Pharloom - Silksong" },
 	4: {"Object": $Slot4, "Description": "Rapture - Bioshock" },
-	5: {"Object": $Slot5, "Description": "Irithil - DarkSouls III"}
+	5: {"Object": $Slot5, "Description": "Irithil - DarkSouls III"},
+	6: {"Object": $Slot6, "Description": "Leyndell - Elden Ring"}
 }
 
 var COLLECTED_STAMPS: Dictionary = {}
