@@ -1,3 +1,20 @@
-[gd_scene format=3 uid="uid://d8jtey8qvr6g"]
+[gd_scene load_steps=4 format=3 uid="uid://d8jtey8qvr6g"]
+
+[ext_resource type="Script" uid="uid://cegw6s80sr0xr" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://boe8u32d81rx5" path="res://stamp.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://bu2q236hjt5t4" path="res://album.tscn" id="2_0xm2m"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_h2yge")
+
+[node name="Stamp" parent="." groups=["stamps"] instance=ExtResource("1_ig7tw")]
+position = Vector2(901, 23)
+
+[node name="Stamp3" parent="." groups=["stamps"] instance=ExtResource("1_ig7tw")]
+position = Vector2(903, 340)
+
+[node name="Stamp2" parent="." groups=["stamps"] instance=ExtResource("1_ig7tw")]
+position = Vector2(900, 177)
+stamp_id = 1
+
+[node name="Album" parent="." instance=ExtResource("2_0xm2m")]

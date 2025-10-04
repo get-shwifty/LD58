@@ -1,0 +1,35 @@
+extends Node2D
+
+@onready var album = $Album
+@onready var stamp1 = $Stamp
+@onready var stamp2 = $Stamp2
+
+func _ready():
+	# Connecter les signaux des timbres disponibles
+	connect_stamps()
+
+func connect_stamps():
+	# Trouver tous les timbres dans la scène
+	var stamps = get_tree().get_nodes_in_group("stamps")
+	for stamp in stamps:
+		stamp.stamp_clicked.connect(_on_stamp_collected)
+
+func _on_stamp_collected(stamp: Stamp):
+	var stamp_id = stamp.stamp_id
+	print("Timbre collecté : ", stamp_id)
+	
+	var target_position = album.get_slot_position(stamp_id)
+	animate_stamp_to_slot(stamp, target_position)
+	album.mark_stamp_collected(stamp_id)
+	print(album.COLLECTED_STAMPS)
+
+func animate_stamp_to_slot(stamp: Stamp, target_position: Vector2):
+	var tween = create_tween()
+	tween.set_parallel(true)
+	
+	# Déplacement
+	tween.tween_property(stamp, "global_position", target_position, 0.5).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
+	
+	# Petit effet de scale pendant le déplacement
+	tween.tween_property(stamp, "scale", Vector2(1.2, 1.2), 0.25)
+	tween.chain().tween_property(stamp, "scale", Vector2(1.0, 1.0), 0.25)

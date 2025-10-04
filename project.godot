@@ -11,5 +11,6 @@ config_version=5
 [application]
 
 config/name="Stamps"
+run/main_scene="uid://d8jtey8qvr6g"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://Assets/icon.svg"
