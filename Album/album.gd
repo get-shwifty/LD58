@@ -3,7 +3,7 @@ class_name Album
 
 const SLOT_PER_PAGE = 6
 const SLOT_MARGE_SIZE_X = 250
-const SLOT_MARGE_SIZE_Y = 80
+const SLOT_MARGE_SIZE_Y = 95
 var album_dict = global.ALBUM_DICT
 var COLLECTED_STAMPS: Dictionary = {}
 var slots = [[]]
@@ -28,7 +28,7 @@ func _ready():
 			new_slot.position.x = SLOT_MARGE_SIZE_X
 		else : 
 			new_slot.position.x = 32.0
-		new_slot.position.y = SLOT_MARGE_SIZE_Y * ((current_page_slot_num % (SLOT_PER_PAGE / 2)) + 0.5)
+		new_slot.position.y = SLOT_MARGE_SIZE_Y * ((current_page_slot_num % (SLOT_PER_PAGE / 2)) + 0.27)
 
 		current_page_slot_num += 1
 	
