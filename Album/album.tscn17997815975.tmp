@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu2q236hjt5t4"]
+
+[ext_resource type="Script" uid="uid://x5yw3dustn78" path="res://Album/album.gd" id="1_5p2gi"]
+[ext_resource type="PackedScene" uid="uid://cgfkilaealjgk" path="res://Album/slot.tscn" id="2_qwklg"]
+
+[node name="Album" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_5p2gi")
+
+[node name="Slot" parent="." instance=ExtResource("2_qwklg")]
+layout_mode = 1
+offset_left = 37.0
+offset_top = 29.0
+offset_right = 37.0
+offset_bottom = 29.0
+
+[node name="Slot2" parent="." instance=ExtResource("2_qwklg")]
+layout_mode = 1
+offset_left = 281.0
+offset_top = 113.0
+offset_right = 281.0
+offset_bottom = 113.0
+
+[node name="Slot3" parent="." instance=ExtResource("2_qwklg")]
+layout_mode = 1
+offset_left = 281.0
+offset_top = 199.0
+offset_right = 281.0
+offset_bottom = 199.0
+
+[node name="Slot4" parent="." instance=ExtResource("2_qwklg")]
+layout_mode = 1
+offset_left = 38.0
+offset_top = 200.0
+offset_right = 38.0
+offset_bottom = 200.0
+
+[node name="Slot5" parent="." instance=ExtResource("2_qwklg")]
+layout_mode = 1
+offset_left = 279.0
+offset_top = 28.0
+offset_right = 279.0
+offset_bottom = 28.0
+
+[node name="Slot6" parent="." instance=ExtResource("2_qwklg")]
+layout_mode = 1
+offset_left = 38.0
+offset_top = 108.0
+offset_right = 38.0
+offset_bottom = 108.0
