@@ -7,6 +7,7 @@
 size = Vector2(44, 54)
 
 [node name="Stamp" type="Area2D"]
+position = Vector2(511, 116)
 script = ExtResource("1_y88um")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
