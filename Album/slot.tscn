@@ -2,14 +2,13 @@
 
 [ext_resource type="Script" uid="uid://ceh43yk46ggwb" path="res://Album/slot.gd" id="1_lxefw"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yxf3l"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a2pmq"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.94510335, 0.3862584, 0.834363, 1)
-border_blend = true
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.10847079, 0.28672177, 0.3308282, 1)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -25,10 +24,11 @@ grow_vertical = 2
 script = ExtResource("1_lxefw")
 
 [node name="Panel" type="Panel" parent="."]
+visible = false
 layout_mode = 0
-offset_right = 45.0
-offset_bottom = 55.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_yxf3l")
+offset_right = 44.0
+offset_bottom = 54.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_a2pmq")
 
 [node name="Occurrency" type="Label" parent="."]
 layout_mode = 0
@@ -44,7 +44,8 @@ text = "x 0"
 layout_mode = 0
 offset_left = 3.0
 offset_top = 55.0
-offset_right = 43.0
-offset_bottom = 78.0
+offset_right = 42.0
+offset_bottom = 67.0
+theme_override_font_sizes/font_size = 8
 text = "???"
 horizontal_alignment = 1

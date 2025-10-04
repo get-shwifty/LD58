@@ -8,19 +8,23 @@
 script = ExtResource("1_h2yge")
 
 [node name="Stamp1" parent="." groups=["stamps"] instance=ExtResource("1_ig7tw")]
-position = Vector2(374, 117)
+position = Vector2(373, 127)
 stamp_id = 1
 
 [node name="Stamp2" parent="." groups=["stamps"] instance=ExtResource("1_ig7tw")]
-position = Vector2(207, 123)
+position = Vector2(311, 124)
 stamp_id = 2
 
 [node name="Stamp3" parent="." groups=["stamps"] instance=ExtResource("1_ig7tw")]
-position = Vector2(175, 16)
+position = Vector2(317, 59)
 stamp_id = 3
 
 [node name="Stamp4" parent="." groups=["stamps"] instance=ExtResource("1_ig7tw")]
 position = Vector2(370, 31)
 stamp_id = 4
+
+[node name="Stamp5" parent="." groups=["stamps"] instance=ExtResource("1_ig7tw")]
+position = Vector2(436, 58)
+stamp_id = 5
 
 [node name="Album" parent="." instance=ExtResource("2_0xm2m")]

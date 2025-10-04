@@ -8,12 +8,14 @@ var sprite_stamp1 = preload("res://Assets/stamps/lumiere.png")
 var sprite_stamp2 = preload("res://Assets/stamps/nevaries.png")
 var sprite_stamp3 = preload("res://Assets/stamps/pharloom.png")
 var sprite_stamp4 = preload("res://Assets/stamps/rapture.png")
+var sprite_stamp5 = preload("res://Assets/stamps/irithil.png")
 
 func _ready():
 	$Stamp1.set_stamp_texture(sprite_stamp1)
 	$Stamp2.set_stamp_texture(sprite_stamp2)
 	$Stamp3.set_stamp_texture(sprite_stamp3)
 	$Stamp4.set_stamp_texture(sprite_stamp4)
+	$Stamp5.set_stamp_texture(sprite_stamp5)
 	# Connecter les signaux des timbres disponibles
 	connect_stamps()
 
