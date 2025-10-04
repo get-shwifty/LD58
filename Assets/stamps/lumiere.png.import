@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dildxml7wxsg3"
-path="res://.godot/imported/Lumiere.jpg-fe171ddc140379b203f92d1a3e3e44a8.ctex"
+uid="uid://dhq202g553jt4"
+path="res://.godot/imported/lumiere.png-f3906199557c8917a607b476424b7932.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Lumiere.jpg"
-dest_files=["res://.godot/imported/Lumiere.jpg-fe171ddc140379b203f92d1a3e3e44a8.ctex"]
+source_file="res://Assets/stamps/lumiere.png"
+dest_files=["res://.godot/imported/lumiere.png-f3906199557c8917a607b476424b7932.ctex"]
 
 [params]
 
