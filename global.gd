@@ -4,7 +4,8 @@ var ALBUM_DICT = {
 	0: {
 		"Sprite": preload("res://Assets/stamps/lumiere.png"),
 		"Name": "Lumière",
-		"Description": "Where is my baguette ?" 
+		"Description": "Where is my 
+baguette ?" 
 	},
 	1: {
 		"Sprite": preload("res://Assets/stamps/nevaries.png"),
@@ -20,13 +21,15 @@ Donipuana Vorinet"
 	3: {
 		"Sprite": preload("res://Assets/stamps/rapture.png"), 
 		"Name": "Rapture",
-		"Description": "Rate my game 5 stars.
+		"Description": "Rate my game 
+5 stars.
 Would you kind ?" 
 	},
 	4: {
 		"Sprite": preload("res://Assets/stamps/irithil.png"),
 		"Name": "Irithil",
-		"Description": "Whoa, such a nice bridge"
+		"Description": "Whoa, such a nice 
+bridge"
 	},
 	5: {
 		"Sprite": preload("res://Assets/stamps/leyndell.png"),

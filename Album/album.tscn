@@ -9,6 +9,6 @@ anchors_preset = 0
 script = ExtResource("1_5p2gi")
 
 [node name="Book" type="Sprite2D" parent="."]
-position = Vector2(212, 162)
-scale = Vector2(1.1223403, 1.157609)
+position = Vector2(218.94948, 161.74242)
+scale = Vector2(1.1119316, 1.1346682)
 texture = ExtResource("2_qwklg")
