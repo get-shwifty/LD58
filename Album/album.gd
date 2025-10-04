@@ -66,7 +66,9 @@ func mark_stamp_collected(stamp_id: int):
 func set_slot_occurency(stamp_id: int):
 	var slot: Slot = get_slot(stamp_id)
 	var description: String = album_dict[stamp_id]["Description"]
+	var name: String = album_dict[stamp_id]["Name"]
 	var occurrency = COLLECTED_STAMPS[stamp_id]
 	
-	slot.get_node("Occurrency").text = str("x", occurrency)
+	slot.get_node("Occurrency").text = str("x ", occurrency)
 	slot.get_node("Description").text = str(description)
+	slot.get_node("Name").text = str(name)
