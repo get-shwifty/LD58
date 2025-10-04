@@ -2,8 +2,10 @@ extends Control
 class_name StampAlbum
 
 @onready var ALBUM_DICT = {
-	0: $Slot,
-	1: $Slot2
+	1: $Slot,
+	2: $Slot2,
+	3: $Slot3,
+	4: $Slot4
 }
 
 var COLLECTED_STAMPS: Dictionary = {}
@@ -23,5 +25,5 @@ func mark_stamp_collected(stamp_id: int):
 
 func set_slot_occurency(stamp_id: int):
 	var slot: Slot = ALBUM_DICT[stamp_id]
-	var occurency = COLLECTED_STAMPS[stamp_id]
-	slot.get_node("Label").text = str(occurency)
+	var occurrency = COLLECTED_STAMPS[stamp_id]
+	slot.get_node("Occurrency").text = str("x", occurrency)

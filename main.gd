@@ -4,7 +4,16 @@ extends Node2D
 @onready var stamp1 = $Stamp
 @onready var stamp2 = $Stamp2
 
+var sprite_stamp1 = preload("res://Assets/stamps/lumiere.png")
+var sprite_stamp2 = preload("res://Assets/stamps/nevaries.png")
+var sprite_stamp3 = preload("res://Assets/stamps/pharloom.png")
+var sprite_stamp4 = preload("res://Assets/stamps/rapture.png")
+
 func _ready():
+	$Stamp1.set_stamp_texture(sprite_stamp1)
+	$Stamp2.set_stamp_texture(sprite_stamp2)
+	$Stamp3.set_stamp_texture(sprite_stamp3)
+	$Stamp4.set_stamp_texture(sprite_stamp4)
 	# Connecter les signaux des timbres disponibles
 	connect_stamps()
 

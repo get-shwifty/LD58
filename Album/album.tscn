@@ -15,3 +15,13 @@ layout_mode = 1
 layout_mode = 1
 offset_left = 65.0
 offset_right = 65.0
+
+[node name="Slot3" parent="." instance=ExtResource("2_qwklg")]
+layout_mode = 1
+offset_left = 135.0
+offset_right = 135.0
+
+[node name="Slot4" parent="." instance=ExtResource("2_qwklg")]
+layout_mode = 1
+offset_left = 201.0
+offset_right = 201.0

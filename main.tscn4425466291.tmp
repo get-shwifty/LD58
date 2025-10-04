@@ -7,20 +7,20 @@
 [node name="Main" type="Node2D"]
 script = ExtResource("1_h2yge")
 
+[node name="Album" parent="." instance=ExtResource("2_0xm2m")]
+
 [node name="Stamp1" parent="." groups=["stamps"] instance=ExtResource("1_ig7tw")]
 position = Vector2(374, 117)
-stamp_id = 1
+stamp_id = 0
 
 [node name="Stamp2" parent="." groups=["stamps"] instance=ExtResource("1_ig7tw")]
 position = Vector2(207, 123)
-stamp_id = 2
+stamp_id = 0
 
 [node name="Stamp3" parent="." groups=["stamps"] instance=ExtResource("1_ig7tw")]
 position = Vector2(175, 16)
-stamp_id = 3
+stamp_id = 0
 
 [node name="Stamp4" parent="." groups=["stamps"] instance=ExtResource("1_ig7tw")]
 position = Vector2(370, 31)
-stamp_id = 4
-
-[node name="Album" parent="." instance=ExtResource("2_0xm2m")]
+stamp_id = 0

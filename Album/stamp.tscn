@@ -13,6 +13,6 @@ script = ExtResource("1_y88um")
 position = Vector2(22, 27)
 shape = SubResource("RectangleShape2D_y88um")
 
-[node name="Lumiere" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite2D" parent="."]
 position = Vector2(22, 27)
 texture = ExtResource("2_py2up")
