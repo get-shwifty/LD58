@@ -18,7 +18,7 @@ func connect_boosters():
 		booster.booster_exploded.connect(_on_booster_exploded)
 
 func _on_booster_exploded(booster: Booster):
-	spawn_stamps_from_booster(booster.position, 5)
+	spawn_stamps_from_booster(booster.position, 20)
 	
 func spawn_stamps_from_booster(position: Vector2, nb_stamps: int):
 	var spawn_radius = 40.0
@@ -34,6 +34,7 @@ func spawn_stamps_from_booster(position: Vector2, nb_stamps: int):
 		create_stamp(spawn_pos)
 
 func create_stamp(spawn_pos):
+	# Récupération d'un id de timbre aléatoirement, en f° de sa rareté
 	var stamp_id = randi() % album.album_dict.size()
 	var new_stamp = stamp_scene.instantiate()
 	
