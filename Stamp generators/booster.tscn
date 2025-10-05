@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://vml3iuf1k0ti"]
+
+[ext_resource type="Script" uid="uid://db1fn467atj6p" path="res://Stamp generators/booster.gd" id="1_8p2oy"]
+[ext_resource type="Texture2D" uid="uid://bfno18kkx6gsd" path="res://Assets/icon.svg" id="1_llxjx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8p2oy"]
+size = Vector2(100, 53.5)
+
+[node name="Booster" type="Area2D"]
+script = ExtResource("1_8p2oy")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(50.25, 28.249998)
+scale = Vector2(0.76171875, 0.43359375)
+texture = ExtResource("1_llxjx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(51, 27.25)
+shape = SubResource("RectangleShape2D_8p2oy")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(52, 25)
+emitting = false
+amount = 30
+lifetime = 1.24
+one_shot = true
+explosiveness = 1.0
+emission_shape = 3
+emission_rect_extents = Vector2(80, 24)
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 5)
+initial_velocity_min = 80.0
+initial_velocity_max = 130.0
+damping_min = 2.0
+damping_max = 4.396
+scale_amount_min = 3.0
+scale_amount_max = 5.0
+anim_speed_min = 43.47
+anim_speed_max = 43.47

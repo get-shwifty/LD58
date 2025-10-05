@@ -3,7 +3,7 @@ class_name Stamp
 
 @export var stamp_id: int = 0
 
-signal stamp_clicked(stamp_id)
+signal stamp_clicked(stamp)
 
 func _ready():
 	# Connecter le signal d'entrée
