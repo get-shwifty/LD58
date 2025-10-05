@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://d8jtey8qvr6g"]
+[gd_scene load_steps=4 format=3 uid="uid://d8jtey8qvr6g"]
 
 [ext_resource type="Script" uid="uid://cegw6s80sr0xr" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://bu2q236hjt5t4" path="res://Album/album.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://vml3iuf1k0ti" path="res://Stamp generators/booster.tscn" id="3_h2yge"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_h2yge")
 
 [node name="Album" parent="." instance=ExtResource("2_0xm2m")]
+
+[node name="Booster" parent="." groups=["boosters"] instance=ExtResource("3_h2yge")]
+position = Vector2(459, 133)

@@ -55,5 +55,11 @@ bridge"
 		"Sprite": preload("res://Assets/stamps/timberhearth.png"),
 		"Name": "Timber earth",
 		"Description": "Outer wilds"
+	},
+	10: {
+		"Sprite": preload("res://Assets/stamps/tunic.png"),
+		"Name": "Tunic",
+		"Description": "Left Up Up Right 
+Down Up Right Right"
 	}
 }
