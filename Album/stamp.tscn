@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://boe8u32d81rx5"]
+[gd_scene load_steps=3 format=3 uid="uid://boe8u32d81rx5"]
 
 [ext_resource type="Script" uid="uid://b5vvjvd7pt4ms" path="res://Album/stamp.gd" id="1_y88um"]
-[ext_resource type="Texture2D" uid="uid://dhq202g553jt4" path="res://Assets/stamps/lumiere.png" id="2_py2up"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y88um"]
 size = Vector2(44, 54)
@@ -14,6 +13,5 @@ script = ExtResource("1_y88um")
 position = Vector2(22, 27)
 shape = SubResource("RectangleShape2D_y88um")
 
-[node name="Sprite" type="Sprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(22, 27)
-texture = ExtResource("2_py2up")

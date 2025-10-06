@@ -18,7 +18,7 @@ func connect_boosters():
 		booster.booster_exploded.connect(_on_booster_exploded)
 
 func _on_booster_exploded(booster: Booster):
-	spawn_stamps_from_booster(booster.position, 20)
+	spawn_stamps_from_booster(booster.position, 5)
 	
 func spawn_stamps_from_booster(position: Vector2, nb_stamps: int):
 	var spawn_radius = 40.0
@@ -35,10 +35,12 @@ func spawn_stamps_from_booster(position: Vector2, nb_stamps: int):
 
 func create_stamp(spawn_pos):
 	# Récupération d'un id de timbre aléatoirement, en f° de sa rareté
-	var stamp_id = randi() % album.album_dict.size()
+	var rarity = randf()
+	var stamp_pool = get_stamps_by_rarity(rarity)
+	var stamp_id = stamp_pool.keys()[randi() % stamp_pool.size()]
 	var new_stamp = stamp_scene.instantiate()
 	
-	new_stamp.set_stamp_texture(global.ALBUM_DICT[stamp_id]["Sprite"])
+	new_stamp.set_stamp_texture(stamp_pool[stamp_id]["Sprite"])
 	new_stamp.position = spawn_pos
 	add_child(new_stamp)
 	new_stamp.add_to_group("stamps")
@@ -88,3 +90,25 @@ func animate_stamp_to_slot(stamp: Stamp, target_position: Vector2):
 	tween.chain().tween_property(stamp, "scale", Vector2(1.0, 1.0), 0.25)
 	
 	await tween.finished
+
+func get_stamps_by_rarity(rarity: float):
+	var output_rarity = 0
+	var output_dict = {}
+	
+	if rarity <= 0.45:
+		output_rarity = 0
+	elif rarity <= 0.70:
+		output_rarity = 1
+	elif rarity <= 0.85:
+		output_rarity = 2
+	elif rarity <= 0.96:
+		output_rarity = 3
+	else:
+		output_rarity = 4
+		
+	for stamp_id in global.ALBUM_DICT:
+		if global.ALBUM_DICT[stamp_id]['Rarity'] == output_rarity:
+			output_dict[stamp_id] = global.ALBUM_DICT[stamp_id]	
+	
+	return output_dict
+		

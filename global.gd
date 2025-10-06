@@ -86,5 +86,17 @@ Down Up Right Right"
 		"Description": "Code 31! Officer in
 need of assistance! 
 ON THE DANCE FLOOR!"
+	},
+	13: {
+		"Sprite": preload("res://Assets/stamps/basic1.png"),
+		"Rarity": 0,
+		"Name": "Ludum",
+		"Description": "Don't mind me, just an average stamp."
+	},
+	14: {
+		"Sprite": preload("res://Assets/stamps/city_of_tears.png"),
+		"Rarity": 0,
+		"Name": "City of Tears",
+		"Description": "I'm just gonna rest here for a bit."
 	}
 }
