@@ -17,7 +17,9 @@ func explode():
 	# Animation d'explosion
 	var tween = create_tween()
 	tween.set_parallel(true)
-	
+		
+	$AnimatedSprite2D.play()
+	await $AnimatedSprite2D.animation_finished
 	# Grossir puis disparaître
 	tween.tween_property(sprite, "scale", Vector2(2.0, 2.0), 0.4)
 	tween.tween_property(sprite, "modulate:a", 0.0, 0.4)
@@ -31,4 +33,4 @@ func explode():
 	await tween.finished
 	emit_signal("booster_exploded", self)
 	
-	queue_free()
+	# queue_free()

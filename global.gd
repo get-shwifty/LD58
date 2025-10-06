@@ -95,7 +95,7 @@ ON THE DANCE FLOOR!"
 	},
 	14: {
 		"Sprite": preload("res://Assets/stamps/city_of_tears.png"),
-		"Rarity": 0,
+		"Rarity": 4,
 		"Name": "City of Tears",
 		"Description": "I'm just gonna rest here for a bit."
 	}
