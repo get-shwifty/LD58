@@ -21,7 +21,7 @@ func _on_booster_exploded(booster: Booster):
 	spawn_stamps_from_booster(booster.position, 5)
 	
 func spawn_stamps_from_booster(position: Vector2, nb_stamps: int):
-	var spawn_radius = 40.0
+	var spawn_radius = 75.0
 	var angle_step = 360.0 / nb_stamps
 	
 	for i in range(nb_stamps):
@@ -31,9 +31,9 @@ func spawn_stamps_from_booster(position: Vector2, nb_stamps: int):
 		var spawn_pos = position + offset
 		
 		# Créer un timbre aléatoire
-		create_stamp(spawn_pos)
+		create_stamp(position + Vector2(50, 50), spawn_pos)
 
-func create_stamp(spawn_pos):
+func create_stamp(start_pos, spawn_pos):
 	# Récupération d'un id de timbre aléatoirement, en f° de sa rareté
 	var rarity = randf()
 	var stamp_pool = get_stamps_by_rarity(rarity)
@@ -41,11 +41,17 @@ func create_stamp(spawn_pos):
 	var new_stamp = stamp_scene.instantiate()
 	
 	new_stamp.set_stamp_texture(stamp_pool[stamp_id]["Sprite"])
-	new_stamp.position = spawn_pos
+	# Position de départ (par exemple au-dessus de la position finale)
+	new_stamp.position = start_pos  # Ajustez le décalage selon vos besoins
 	add_child(new_stamp)
 	new_stamp.add_to_group("stamps")
 	new_stamp.stamp_id = stamp_id
-	# Connecter les signaux des timbres & booster disponibles
+	# Créer le tween
+	var tween = create_tween()
+	tween.tween_property(new_stamp, "position", spawn_pos, 0.5).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
+	# Attendre la fin du tween avant de continuer
+	await tween.finished
+	# Connecter les signaux après l'animation
 	connect_stamps()
 
 func _on_stamp_collected(stamp: Stamp):

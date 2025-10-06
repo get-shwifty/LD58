@@ -15,14 +15,14 @@ func _on_input_event(viewport, event, shape_idx):
 
 func explode():
 	# Animation d'explosion
-	var tween = create_tween()
-	tween.set_parallel(true)
+	# var tween = create_tween()
+	# tween.set_parallel(true)
 		
 	$AnimatedSprite2D.play()
 	await $AnimatedSprite2D.animation_finished
 	# Grossir puis disparaître
-	tween.tween_property(sprite, "scale", Vector2(2.0, 2.0), 0.4)
-	tween.tween_property(sprite, "modulate:a", 0.0, 0.4)
+	# tween.tween_property(sprite, "scale", Vector2(2.0, 2.0), 0.4)
+	# tween.tween_property(sprite, "modulate:a", 0.0, 0.4)
 	
 	# Burst de particules
 	if particles:
@@ -30,7 +30,6 @@ func explode():
 		particles.emitting = true
 		
 	await particles.finished
-	await tween.finished
 	emit_signal("booster_exploded", self)
 	
-	# queue_free()
+	queue_free()
